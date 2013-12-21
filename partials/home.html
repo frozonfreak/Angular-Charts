@@ -1,0 +1,9 @@
+<div class="container">
+        <select ng-options="chart.chartType for chart in chartNames" ng-model="selectedItem" ng-change="
+        updateChart()"></select>
+        <div class="topcoat-list">
+          <h3 class="topcoat-list__header" ng-model="selectedItem">{{selectedItem.chartType}}</h3>
+
+        </div>
+        <div google-chart chart="chart" style="{{chart.cssStyle}}" on-ready="chartReady()"/>
+</div>
